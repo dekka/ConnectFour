@@ -8,6 +8,7 @@
 
 #import "GameBoard.h"
 #import "Player.h"
+#import "GamePiece.h"
 
 @implementation GameBoard
 
@@ -18,8 +19,17 @@
         Player *secondPlayer = [[Player alloc] initWithColor:[UIColor blackColor]];
         
         _players = [[NSArray alloc] initWithObjects:firstPlayer, secondPlayer, nil];
+        NSMutableArray *tempPieces = [NSMutableArray new];
+        for (NSInteger i = 0; i < 42; i++) {
+            GamePiece *gamePiece = [GamePiece new];
+            [tempPieces addObject:gamePiece];
+        }
+        _pieces = tempPieces;
+        
     }
     return self;
 }
+
+
 
 @end
