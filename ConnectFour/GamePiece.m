@@ -10,6 +10,18 @@
 
 @implementation GamePiece
 
++ (GamePiece *)redPiece
+{
+    GamePiece *newPiece = [GamePiece new];
+    newPiece.pieceColor = [UIColor redColor];
+    return newPiece;
+}
 
++ (GamePiece *)blackPiece
+{
+    GamePiece *newPiece = [GamePiece new];
+    newPiece.pieceColor = [UIColor blackColor];
+    return newPiece;
+}
 
 @end
