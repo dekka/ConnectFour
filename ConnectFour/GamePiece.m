@@ -12,15 +12,18 @@
 
 + (GamePiece *)redPiece
 {
-    GamePiece *newPiece = [GamePiece new];
-    newPiece.pieceColor = [UIColor redColor];
-    return newPiece;
+    return [GamePiece pieceWithColor:[UIColor redColor]];
 }
 
 + (GamePiece *)blackPiece
 {
+    return [GamePiece pieceWithColor:[UIColor blackColor]];
+}
+
++ (GamePiece *)pieceWithColor:(UIColor *)color
+{
     GamePiece *newPiece = [GamePiece new];
-    newPiece.pieceColor = [UIColor blackColor];
+    newPiece.pieceColor = color;
     return newPiece;
 }
 
