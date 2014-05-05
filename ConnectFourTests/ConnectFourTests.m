@@ -7,6 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "GamePiece.h"
+#import "GameBoard.h"
+#import "Player.h"
 
 @interface ConnectFourTests : XCTestCase
 
@@ -26,12 +29,19 @@
     [super tearDown];
 }
 
-- (void)testTwoPlusTwoEqualsFour
+- (void)testColorOfNewPiece
 {
-    NSInteger numberOne = 2;
-    NSInteger numberTwo = 2;
-
-    XCTAssertEqual(numberOne + numberTwo, 4, @"2 + 2 should equal 4");
+    GamePiece *redPiece = [GamePiece redPiece];
+    GamePiece *blackPiece = [GamePiece blackPiece];
+    
+//    blackPiece.pieceColor = [UIColor blackColor];
+//    
+//    redPiece.pieceColor = [UIColor redColor];
+//    
+    XCTAssertEqual(blackPiece.pieceColor, [UIColor blackColor], @"The black piece should be blackColor");
+    
+    XCTAssertEqual(redPiece.pieceColor, [UIColor redColor], @"The red piece should be redColor");
+    
 }
 
 @end
