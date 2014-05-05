@@ -31,10 +31,16 @@
         }
         
         _pieces = tempPieces;
+        _columns = [NSMutableArray new];
+        for (NSInteger i = 0; i < 7; i++) {
+            Column *column = [[Column alloc] initWithSlots];
+            [_columns addObject:column];
+        }
         
     }
     return self;
 }
+
 
 
 

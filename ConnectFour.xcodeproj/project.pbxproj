@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003316BB1918379C009A76AB /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 003316BA1918379C009A76AB /* Column.m */; };
+		003316BC1918379C009A76AB /* Column.m in Sources */ = {isa = PBXBuildFile; fileRef = 003316BA1918379C009A76AB /* Column.m */; };
+		003316BF1918385D009A76AB /* Slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 003316BE1918385D009A76AB /* Slot.m */; };
+		003316C01918385D009A76AB /* Slot.m in Sources */ = {isa = PBXBuildFile; fileRef = 003316BE1918385D009A76AB /* Slot.m */; };
 		00FDDFD31917F2AD00DD0AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FDDFD21917F2AD00DD0AB4 /* Foundation.framework */; };
 		00FDDFD51917F2AD00DD0AB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FDDFD41917F2AD00DD0AB4 /* CoreGraphics.framework */; };
 		00FDDFD71917F2AD00DD0AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FDDFD61917F2AD00DD0AB4 /* UIKit.framework */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003316B91918379C009A76AB /* Column.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Column.h; sourceTree = "<group>"; };
+		003316BA1918379C009A76AB /* Column.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Column.m; sourceTree = "<group>"; };
+		003316BD1918385D009A76AB /* Slot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slot.h; sourceTree = "<group>"; };
+		003316BE1918385D009A76AB /* Slot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slot.m; sourceTree = "<group>"; };
 		00FDDFCF1917F2AD00DD0AB4 /* ConnectFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FDDFD21917F2AD00DD0AB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00FDDFD41917F2AD00DD0AB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +182,10 @@
 				00FDE00F1917F65500DD0AB4 /* GameBoard.m */,
 				00FDE0121917F66600DD0AB4 /* Player.h */,
 				00FDE0131917F66600DD0AB4 /* Player.m */,
+				003316B91918379C009A76AB /* Column.h */,
+				003316BA1918379C009A76AB /* Column.m */,
+				003316BD1918385D009A76AB /* Slot.h */,
+				003316BE1918385D009A76AB /* Slot.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -291,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003316BB1918379C009A76AB /* Column.m in Sources */,
 				00FDDFE91917F2AD00DD0AB4 /* ViewController.m in Sources */,
 				00FDDFE31917F2AD00DD0AB4 /* AppDelegate.m in Sources */,
+				003316BF1918385D009A76AB /* Slot.m in Sources */,
 				00FDE0101917F65500DD0AB4 /* GameBoard.m in Sources */,
 				00FDE00C1917F64900DD0AB4 /* GamePiece.m in Sources */,
 				00FDE0141917F66600DD0AB4 /* Player.m in Sources */,
@@ -304,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003316BC1918379C009A76AB /* Column.m in Sources */,
 				00FDE0151917F66600DD0AB4 /* Player.m in Sources */,
 				00FDE00D1917F64900DD0AB4 /* GamePiece.m in Sources */,
+				003316C01918385D009A76AB /* Slot.m in Sources */,
 				00FDE0111917F65500DD0AB4 /* GameBoard.m in Sources */,
 				00FDDFFE1917F2AD00DD0AB4 /* ConnectFourTests.m in Sources */,
 			);
@@ -504,6 +520,7 @@
 				00FDE0031917F2AD00DD0AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00FDE0041917F2AD00DD0AB4 /* Build configuration list for PBXNativeTarget "ConnectFourTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +529,7 @@
 				00FDE0061917F2AD00DD0AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

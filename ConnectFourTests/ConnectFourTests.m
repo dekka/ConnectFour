@@ -10,6 +10,8 @@
 #import "GamePiece.h"
 #import "GameBoard.h"
 #import "Player.h"
+#import "Slot.h"
+#import "Column.h"
 
 @interface ConnectFourTests : XCTestCase
 
@@ -67,8 +69,7 @@
 {
     for (NSInteger i = 0; i < _gameBoard.players.count; i++) {
         XCTAssertNotNil(_gameBoard.players[i], @"There should be a player object at index %d", i);
-    }
-    
+    }    
 }
 
 - (void)testGameBoardForPieces
@@ -76,7 +77,6 @@
     for (GamePiece *piece in _gameBoard.pieces) {
         XCTAssertEqualObjects(piece.gameBoard, _gameBoard, @"Piece should reference their gameboard");
     }
-    
 }
 
 - (void)testGamePieceColorMatchesPlayerColor
@@ -86,15 +86,34 @@
             XCTAssertEqual(gamePiece.pieceColor, player.playerColor, @"The game pieces should be the same color as the player color");
         }
     }
-    
 }
 
 - (void)testPlayerInitialGamePieceCount
 {
-    for (Player *player in _gameBoard.players) {
-        
+    for (Player *player in _gameBoard.players)
+    {
         XCTAssertEqual(player.gamePieces.count, 21, @"Each player should start with 21 pieces");
     }
+}
+
+- (void)testNumberOfColumnsOnGameBoard
+{
+    
+        XCTAssertEqual(_gameBoard.columns.count, 7, @"The game board should have 7 columns");
+    
+}
+
+- (void)testNumberOfSlotsInColumn
+{
+    for (Column *column in self.gameBoard.columns) {
+        XCTAssertEqual(column.slots.count, 6, @"Each column should have 6 slots");
+    }
+}
+
+- (void)testSlotCanBeFilledByGamePiece
+{
+    
+    
 }
 
 @end

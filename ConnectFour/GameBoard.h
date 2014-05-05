@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Column.h"
 
 @class GamePiece;
 
@@ -14,10 +15,13 @@
 
 @property (nonatomic, strong) NSArray *pieces;
 @property (nonatomic, strong) NSArray *players;
-@property (nonatomic, strong) NSArray *slots;
+@property (nonatomic, strong) NSMutableArray *columns;
+
 
 - (instancetype)initWithPlayers;
 
 - (void)playPiece:(GamePiece *)gamePiece atIndexPath:(NSIndexPath *)indexPath;
+
+- (void)player:(Player *)player addedGamePiece:(GamePiece *) atColumn:(Column *)column;
 
 @end
