@@ -14,8 +14,8 @@
 - (instancetype)initWithPlayers
 {
     if (self = [super init]) {
-        Player *firstPlayer = [Player new];
-        Player *secondPlayer = [Player new];
+        Player *firstPlayer = [[Player alloc] initWithColor:[UIColor redColor]];
+        Player *secondPlayer = [[Player alloc] initWithColor:[UIColor blackColor]];
         
         _players = [[NSArray alloc] initWithObjects:firstPlayer, secondPlayer, nil];
     }

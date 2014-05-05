@@ -10,4 +10,14 @@
 
 @implementation Player
 
+- (instancetype)initWithColor:(UIColor *)color
+{
+    self = [super init];
+    if (self)
+    {
+        _playerColor = color;
+    }
+    return self;
+}
+
 @end
