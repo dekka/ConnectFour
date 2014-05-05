@@ -21,6 +21,12 @@
 		00FDDFF41917F2AD00DD0AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FDDFD61917F2AD00DD0AB4 /* UIKit.framework */; };
 		00FDDFFC1917F2AD00DD0AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00FDDFFA1917F2AD00DD0AB4 /* InfoPlist.strings */; };
 		00FDDFFE1917F2AD00DD0AB4 /* ConnectFourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDDFFD1917F2AD00DD0AB4 /* ConnectFourTests.m */; };
+		00FDE00C1917F64900DD0AB4 /* GamePiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE00B1917F64900DD0AB4 /* GamePiece.m */; };
+		00FDE00D1917F64900DD0AB4 /* GamePiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE00B1917F64900DD0AB4 /* GamePiece.m */; };
+		00FDE0101917F65500DD0AB4 /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE00F1917F65500DD0AB4 /* GameBoard.m */; };
+		00FDE0111917F65500DD0AB4 /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE00F1917F65500DD0AB4 /* GameBoard.m */; };
+		00FDE0141917F66600DD0AB4 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE0131917F66600DD0AB4 /* Player.m */; };
+		00FDE0151917F66600DD0AB4 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FDE0131917F66600DD0AB4 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		00FDDFF91917F2AD00DD0AB4 /* ConnectFourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConnectFourTests-Info.plist"; sourceTree = "<group>"; };
 		00FDDFFB1917F2AD00DD0AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00FDDFFD1917F2AD00DD0AB4 /* ConnectFourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectFourTests.m; sourceTree = "<group>"; };
+		00FDE00A1917F64900DD0AB4 /* GamePiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePiece.h; sourceTree = "<group>"; };
+		00FDE00B1917F64900DD0AB4 /* GamePiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePiece.m; sourceTree = "<group>"; };
+		00FDE00E1917F65500DD0AB4 /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
+		00FDE00F1917F65500DD0AB4 /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
+		00FDE0121917F66600DD0AB4 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		00FDE0131917F66600DD0AB4 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +124,10 @@
 		00FDDFD81917F2AD00DD0AB4 /* ConnectFour */ = {
 			isa = PBXGroup;
 			children = (
-				00FDDFE11917F2AD00DD0AB4 /* AppDelegate.h */,
-				00FDDFE21917F2AD00DD0AB4 /* AppDelegate.m */,
+				00FDE0091917F2E200DD0AB4 /* Controllers */,
+				00FDE0081917F2DB00DD0AB4 /* View */,
+				00FDE0071917F2D600DD0AB4 /* Models */,
 				00FDDFE41917F2AD00DD0AB4 /* Main.storyboard */,
-				00FDDFE71917F2AD00DD0AB4 /* ViewController.h */,
-				00FDDFE81917F2AD00DD0AB4 /* ViewController.m */,
-				00FDDFEA1917F2AD00DD0AB4 /* Images.xcassets */,
 				00FDDFD91917F2AD00DD0AB4 /* Supporting Files */,
 			);
 			path = ConnectFour;
@@ -126,6 +136,9 @@
 		00FDDFD91917F2AD00DD0AB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00FDDFE11917F2AD00DD0AB4 /* AppDelegate.h */,
+				00FDDFE21917F2AD00DD0AB4 /* AppDelegate.m */,
+				00FDDFEA1917F2AD00DD0AB4 /* Images.xcassets */,
 				00FDDFDA1917F2AD00DD0AB4 /* ConnectFour-Info.plist */,
 				00FDDFDB1917F2AD00DD0AB4 /* InfoPlist.strings */,
 				00FDDFDE1917F2AD00DD0AB4 /* main.m */,
@@ -150,6 +163,35 @@
 				00FDDFFA1917F2AD00DD0AB4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00FDE0071917F2D600DD0AB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00FDE00A1917F64900DD0AB4 /* GamePiece.h */,
+				00FDE00B1917F64900DD0AB4 /* GamePiece.m */,
+				00FDE00E1917F65500DD0AB4 /* GameBoard.h */,
+				00FDE00F1917F65500DD0AB4 /* GameBoard.m */,
+				00FDE0121917F66600DD0AB4 /* Player.h */,
+				00FDE0131917F66600DD0AB4 /* Player.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		00FDE0081917F2DB00DD0AB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00FDE0091917F2E200DD0AB4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00FDDFE71917F2AD00DD0AB4 /* ViewController.h */,
+				00FDDFE81917F2AD00DD0AB4 /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +293,9 @@
 			files = (
 				00FDDFE91917F2AD00DD0AB4 /* ViewController.m in Sources */,
 				00FDDFE31917F2AD00DD0AB4 /* AppDelegate.m in Sources */,
+				00FDE0101917F65500DD0AB4 /* GameBoard.m in Sources */,
+				00FDE00C1917F64900DD0AB4 /* GamePiece.m in Sources */,
+				00FDE0141917F66600DD0AB4 /* Player.m in Sources */,
 				00FDDFDF1917F2AD00DD0AB4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +304,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FDE0151917F66600DD0AB4 /* Player.m in Sources */,
+				00FDE00D1917F64900DD0AB4 /* GamePiece.m in Sources */,
+				00FDE0111917F65500DD0AB4 /* GameBoard.m in Sources */,
 				00FDDFFE1917F2AD00DD0AB4 /* ConnectFourTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
