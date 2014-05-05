@@ -89,6 +89,14 @@
     
 }
 
+- (void)testPlayerInitialGamePieceCount
+{
+    for (Player *player in _gameBoard.players) {
+        
+        XCTAssertEqual(player.gamePieces.count, 21, @"Each player should start with 21 pieces");
+    }
+}
+
 @end
 
 

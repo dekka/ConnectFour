@@ -11,12 +11,12 @@
 @interface Player : NSObject
 
 @property (nonatomic, assign) UIColor *playerColor;
-@property (nonatomic, weak) NSArray *gamePieces;
+@property (nonatomic, strong) NSArray *gamePieces;
 @property (nonatomic, readwrite) BOOL isCurrentTurn;
 
 - (instancetype)initWithColor:(UIColor *)color;
 
-- (instancetype)initWithColor:(UIColor *)color andPieceCount:(NSInteger *)pieceCount;
+- (instancetype)initWithColor:(UIColor *)color andPieceCount:(NSInteger)pieceCount;
 
 
 @end
