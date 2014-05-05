@@ -15,15 +15,16 @@
 - (instancetype)initWithPlayers
 {
     if (self = [super init]) {
-        Player *firstPlayer = [[Player alloc] initWithColor:[UIColor redColor]];
-        Player *secondPlayer = [[Player alloc] initWithColor:[UIColor blackColor]];
+        Player *firstPlayer = [[Player alloc] initWithColor:[UIColor redColor]andPieceCount:21];
+        Player *secondPlayer = [[Player alloc] initWithColor:[UIColor blackColor]andPieceCount:21];
         
         _players = [[NSArray alloc] initWithObjects:firstPlayer, secondPlayer, nil];
         NSMutableArray *tempPieces = [NSMutableArray new];
-        for (NSInteger i = 0; i < 42; i++) {
-            GamePiece *gamePiece = [GamePiece new];
-            [tempPieces addObject:gamePiece];
+        
+        for (Player *player in _players) {
+            [tempPieces addObjectsFromArray:player.gamePieces];
         }
+        
         _pieces = tempPieces;
         
     }

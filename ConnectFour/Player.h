@@ -16,5 +16,7 @@
 
 - (instancetype)initWithColor:(UIColor *)color;
 
+- (instancetype)initWithColor:(UIColor *)color andPieceCount:(NSInteger *)pieceCount;
+
 
 @end

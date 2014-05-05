@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "GamePiece.h"
 
 @implementation Player
 
@@ -16,6 +17,21 @@
     if (self)
     {
         _playerColor = color;
+    }
+    return self;
+}
+
+- (instancetype)initWithColor:(UIColor *)color andPieceCount:(NSInteger)pieceCount
+{
+    self = [super init];
+    if (self) {
+        _playerColor = color;
+        NSMutableArray *tempArray = [NSMutableArray new];
+        for (NSInteger i = 0; i < pieceCount; i++) {
+            GamePiece *newPiece = [color isEqual:[UIColor blackColor]] ? [GamePiece blackPiece] : [GamePiece redPiece];
+            [tempArray addObject:newPiece];
+        }
+        self.gamePieces = tempArray;
     }
     return self;
 }

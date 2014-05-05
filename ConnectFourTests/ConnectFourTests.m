@@ -79,6 +79,16 @@
     
 }
 
+- (void)testGamePieceColorMatchesPlayerColor
+{
+    for (Player *player in _gameBoard.players) {
+        for (GamePiece *gamePiece in player.gamePieces) {
+            XCTAssertEqual(gamePiece.pieceColor, player.playerColor, @"The game pieces should be the same color as the player color");
+        }
+    }
+    
+}
+
 @end
 
 
