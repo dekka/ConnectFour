@@ -7,7 +7,19 @@
 //
 
 #import "GameBoard.h"
+#import "Player.h"
 
 @implementation GameBoard
+
+- (instancetype)initWithPlayers
+{
+    if (self = [super init]) {
+        Player *firstPlayer = [Player new];
+        Player *secondPlayer = [Player new];
+        
+        _players = [[NSArray alloc] initWithObjects:firstPlayer, secondPlayer, nil];
+    }
+    return self;
+}
 
 @end

@@ -13,6 +13,8 @@
 
 @interface ConnectFourTests : XCTestCase
 
+@property (nonatomic, strong) GameBoard *gameBoard;
+
 @end
 
 @implementation ConnectFourTests
@@ -20,12 +22,12 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    _gameBoard = [[GameBoard alloc] initWithPlayers];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    _gameBoard = nil;
     [super tearDown];
 }
 
@@ -34,14 +36,14 @@
     GamePiece *redPiece = [GamePiece redPiece];
     GamePiece *blackPiece = [GamePiece blackPiece];
     
-//    blackPiece.pieceColor = [UIColor blackColor];
-//    
-//    redPiece.pieceColor = [UIColor redColor];
-//    
     XCTAssertEqual(blackPiece.pieceColor, [UIColor blackColor], @"The black piece should be blackColor");
     
     XCTAssertEqual(redPiece.pieceColor, [UIColor redColor], @"The red piece should be redColor");
-    
+}
+
+- (void)testNewGamePlayerCount
+{
+    XCTAssertTrue(_gameBoard.players.count == 2, @"The number of players in a new game should be 2");
 }
 
 @end
