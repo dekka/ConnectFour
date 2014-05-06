@@ -110,11 +110,33 @@
     }
 }
 
-- (void)testSlotCanBeFilledByGamePiece
+- (void)testLastSlotIsOpenSlot
+{
+    for (Column *column in self.gameBoard.columns) {
+        XCTAssertEqualObjects(column.openSlot, [column.slots lastObject], @"The last object in the slots array should be openSlot");
+    }
+}
+
+- (void)testDetermineIfColumnIsFull
 {
     
     
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+    
+    XCTAssertTrue([self.gameBoard.columns[0] isFull], @"nah player");
+    
 }
+
+- (void)testDetermineFirstPlayerByColor
+{
+    [self.gameBoard selectFirstPlayer];
+}
+
 
 @end
 

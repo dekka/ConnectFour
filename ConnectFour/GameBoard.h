@@ -22,6 +22,8 @@
 
 - (void)playPiece:(GamePiece *)gamePiece atIndexPath:(NSIndexPath *)indexPath;
 
-- (void)player:(Player *)player addedGamePiece:(GamePiece *) atColumn:(Column *)column;
+- (void)player:(Player *)player addedGamePieceAtColumn:(NSInteger)index;
+
+- (void)selectFirstPlayer;
 
 @end

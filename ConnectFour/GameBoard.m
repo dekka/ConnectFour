@@ -41,7 +41,45 @@
     return self;
 }
 
+- (void)selectFirstPlayer
+{
+    int c = arc4random_uniform(2);
+    Player *firstPlayer;
+    if (c == 0)
+    {
+        firstPlayer = [self.players firstObject];
+    } else if (c == 1)
+    {
+        firstPlayer = [self.players lastObject];
+    }
+    NSLog(@"The first player is %@",firstPlayer.playerColor);
+}
+
+- (void)player:(Player *)player addedGamePieceAtColumn:(NSInteger)index
+{
+    GamePiece *newPiece = [GamePiece new];
+    newPiece.pieceColor = player.playerColor;
+    newPiece.player = player;
+    
+    Column *column = self.columns[index];
+    
+    if (column.openSlot)
+    {
+        [column addGamePiece:newPiece];
+    }
+    
+}
 
 
 
 @end
+
+
+
+
+
+
+
+
+
+

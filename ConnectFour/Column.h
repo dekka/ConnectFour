@@ -12,7 +12,12 @@
 @interface Column : NSObject
 
 @property (nonatomic, strong) NSMutableArray *slots;
+@property (nonatomic, strong) Slot *openSlot;
+@property (nonatomic) BOOL isFull;
 
 - (instancetype)initWithSlots;
+
+-(void)addGamePiece:(GamePiece *)gamePiece;
+
 
 @end

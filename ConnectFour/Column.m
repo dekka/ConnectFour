@@ -22,7 +22,36 @@
         }
         
     }
+    self.openSlot = [self.slots lastObject];
+    
     return self;
 }
 
+-(void)addGamePiece:(GamePiece *)gamePiece
+{
+    NSInteger index = [self.slots indexOfObject:self.openSlot];
+    self.openSlot.gamePiece = gamePiece;
+    if (index == 0)
+    {
+        self.openSlot = nil;
+        self.isFull = YES;
+    }
+    else
+    {
+         self.openSlot = self.slots[index - 1];
+    }
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
