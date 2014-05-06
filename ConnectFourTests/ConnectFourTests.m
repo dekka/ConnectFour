@@ -119,7 +119,10 @@
 
 - (void)testDetermineIfColumnIsFull
 {
-    
+//    while (![self.gameBoard.columns[0] isFull]) {
+//        [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
+//
+//    }
     
     [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
     [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
@@ -129,7 +132,7 @@
     [self.gameBoard player:self.gameBoard.players[0] addedGamePieceAtColumn:0];
     
     XCTAssertTrue([self.gameBoard.columns[0] isFull], @"nah player");
-    
+//    XCTAssertEqual([self.gameBoard.columns[0] count], 6, @"the column should have 6 pieces");
 }
 
 - (void)testDetermineFirstPlayerByColor
